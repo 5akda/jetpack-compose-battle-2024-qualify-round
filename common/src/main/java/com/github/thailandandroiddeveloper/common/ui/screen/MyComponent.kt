@@ -3,9 +3,12 @@ package com.github.thailandandroiddeveloper.common.ui.screen
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -38,5 +41,22 @@ fun MyTopBar(
             color = MaterialTheme.colorScheme.onPrimaryContainer
         )
         Row(content = rightLayout)
+    }
+}
+
+@Composable
+fun MyBottomAction(onClick: () -> Unit, content: @Composable RowScope.() -> Unit) {
+    Row(
+        modifier = Modifier.fillMaxWidth()
+            .height(102.dp)
+            .background(color = MaterialTheme.colorScheme.primaryContainer)
+            .padding(horizontal = 80.dp, vertical = 31.dp)
+    ) {
+        Button(
+            modifier = Modifier.fillMaxSize(),
+            colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary),
+            onClick = onClick,
+            content = content
+        )
     }
 }
