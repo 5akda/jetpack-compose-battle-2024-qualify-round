@@ -14,7 +14,14 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+
+fun TextStyle.makeItSimilarToOriginalImage(isEnabled: Boolean = true): TextStyle {
+    val magicNumber = 0.5
+    return if (isEnabled) this.copy(letterSpacing = magicNumber.sp) else this
+}
 
 @Composable
 fun MyTopBar(
@@ -37,7 +44,7 @@ fun MyTopBar(
                 .align(Alignment.CenterVertically)
                 .padding(horizontal = 4.dp),
             text = title,
-            style = MaterialTheme.typography.titleLarge,
+            style = MaterialTheme.typography.titleLarge.makeItSimilarToOriginalImage(),
             color = MaterialTheme.colorScheme.onPrimaryContainer
         )
         Row(content = rightLayout)

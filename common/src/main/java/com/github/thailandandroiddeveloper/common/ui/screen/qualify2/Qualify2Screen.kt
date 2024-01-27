@@ -27,6 +27,7 @@ import androidx.compose.ui.unit.dp
 import com.github.thailandandroiddeveloper.common.R
 import com.github.thailandandroiddeveloper.common.ui.preview.Pixel7
 import com.github.thailandandroiddeveloper.common.ui.screen.MyBottomAction
+import com.github.thailandandroiddeveloper.common.ui.screen.makeItSimilarToOriginalImage
 import com.github.thailandandroiddeveloper.common.ui.theme.AppTheme
 
 @Composable
@@ -44,7 +45,7 @@ private fun TutorialBottomAction() {
     MyBottomAction(onClick = {}) {
         Text(
             text = "Next",
-            style = MaterialTheme.typography.labelLarge,
+            style = MaterialTheme.typography.labelLarge.makeItSimilarToOriginalImage(),
             color = MaterialTheme.colorScheme.onPrimary
         )
     }
@@ -62,7 +63,7 @@ private fun TutorialContent(padding: PaddingValues) {
                 .align(Alignment.TopEnd)
                 .padding(horizontal = 20.dp, vertical = 18.dp),
             text = "Skip",
-            style = MaterialTheme.typography.labelLarge,
+            style = MaterialTheme.typography.labelLarge.makeItSimilarToOriginalImage(),
             color = MaterialTheme.colorScheme.primary
         )
         Column(
@@ -73,7 +74,7 @@ private fun TutorialContent(padding: PaddingValues) {
                     .fillMaxWidth()
                     .padding(horizontal = 32.dp),
                 text = "Lorem ipsum dolor sit amet",
-                style = MaterialTheme.typography.headlineSmall,
+                style = MaterialTheme.typography.headlineSmall.makeItSimilarToOriginalImage(),
                 color = MaterialTheme.colorScheme.onSurface,
                 textAlign = TextAlign.Center
             )
@@ -83,7 +84,7 @@ private fun TutorialContent(padding: PaddingValues) {
                     .padding(horizontal = 32.dp)
                     .padding(top = 16.dp),
                 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec egestas dictum lacinia. Integer arcu neque, porttitor ac metus quis, iaculis molestie magna. Vivamus molestie justo sed nulla lacinia, quis fringilla lorem imperdiet. Proin in quam vel odio iaculis fringilla",
-                style = MaterialTheme.typography.bodyMedium,
+                style = MaterialTheme.typography.bodyMedium.makeItSimilarToOriginalImage(),
                 color = MaterialTheme.colorScheme.onSurface,
                 textAlign = TextAlign.Center
             )

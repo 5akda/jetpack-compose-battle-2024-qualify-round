@@ -36,6 +36,7 @@ import androidx.compose.ui.unit.dp
 import com.github.thailandandroiddeveloper.common.R
 import com.github.thailandandroiddeveloper.common.ui.preview.Pixel7
 import com.github.thailandandroiddeveloper.common.ui.screen.MyTopBar
+import com.github.thailandandroiddeveloper.common.ui.screen.makeItSimilarToOriginalImage
 import com.github.thailandandroiddeveloper.common.ui.theme.AppTheme
 
 @Composable
@@ -149,7 +150,7 @@ private fun ProfileContentTagSection(modifier: Modifier, tags: List<String>, sel
                     modifier = Modifier.align(Alignment.Center),
                     text = tagName,
                     color = color,
-                    style = MaterialTheme.typography.labelLarge
+                    style = MaterialTheme.typography.labelLarge.makeItSimilarToOriginalImage()
                 )
             }
         }
@@ -188,12 +189,12 @@ private fun ProfileContentMessageSection(modifier: Modifier, messages: List<Stri
                 ) {
                     Text(
                         text = "Lorem Ipsum",
-                        style = MaterialTheme.typography.titleMedium,
+                        style = MaterialTheme.typography.titleMedium.makeItSimilarToOriginalImage(),
                         color = MaterialTheme.colorScheme.onSurface
                     )
                     Text(
                         text = message,
-                        style = MaterialTheme.typography.bodyMedium,
+                        style = MaterialTheme.typography.bodyMedium.makeItSimilarToOriginalImage(),
                         maxLines = 2,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                         overflow = TextOverflow.Ellipsis

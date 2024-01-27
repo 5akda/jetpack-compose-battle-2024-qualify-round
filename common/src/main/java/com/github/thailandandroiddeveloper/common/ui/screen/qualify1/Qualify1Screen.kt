@@ -30,6 +30,7 @@ import androidx.compose.ui.unit.dp
 import com.github.thailandandroiddeveloper.common.R
 import com.github.thailandandroiddeveloper.common.ui.preview.Pixel7
 import com.github.thailandandroiddeveloper.common.ui.screen.MyTopBar
+import com.github.thailandandroiddeveloper.common.ui.screen.makeItSimilarToOriginalImage
 import com.github.thailandandroiddeveloper.common.ui.theme.AppTheme
 
 @Composable
@@ -90,7 +91,7 @@ private fun MainContent(padding: PaddingValues) {
                 modifier = Modifier.background(color = Color.Transparent),
                 text = "John Doe",
                 color = MaterialTheme.colorScheme.onPrimary,
-                style = MaterialTheme.typography.headlineMedium,
+                style = MaterialTheme.typography.headlineMedium.makeItSimilarToOriginalImage(),
             )
             Row {
                 Image(
@@ -102,14 +103,14 @@ private fun MainContent(padding: PaddingValues) {
                     modifier = Modifier.padding(top = 8.dp, start = 8.dp),
                     text = "Male",
                     color = MaterialTheme.colorScheme.onPrimary,
-                    style = MaterialTheme.typography.bodyMedium
+                    style = MaterialTheme.typography.bodyMedium.makeItSimilarToOriginalImage()
                 )
             }
             Text(
                 modifier = Modifier.padding(top = 8.dp),
                 text = "Lorem ipsum dolor sit amet, cd nulla lacinia, quis fringilla lorem imperdiet. Proin in quam vel odio iaculis fringilla.",
                 color = MaterialTheme.colorScheme.onPrimary,
-                style = MaterialTheme.typography.bodyMedium
+                style = MaterialTheme.typography.bodyMedium.makeItSimilarToOriginalImage()
             )
         }
         Row(
